@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700,900);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap);
 * {
   padding: 0;
   margin: 0;
@@ -74,3 +74,72 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+header {
+  max-width: 1175px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-logo__name {
+  font-size: 20px;
+  line-height: 44px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  color: #161920;
+  margin: 0 10px 0 10px;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  padding: 15px 0;
+  color: #9ba4b0;
+  width: 455px;
+  border: 1px solid #e1e9f2;
+  border-left: none;
+  border-right: none;
+}
+.header-info__support {
+  padding: 0 18px;
+}
+.header-info__support span {
+  color: #484e57;
+}
+.header-info__register {
+  padding: 0 18px;
+  border: 1px solid #e1e9f2;
+  border-top: none;
+  border-bottom: none;
+}
+.header-info__login {
+  padding: 0 5px 0 18px;
+}
+
+body {
+  max-width: 1975px;
+  font-family: "Open Sans", sans-serif;
+}
