@@ -288,6 +288,41 @@ body {
   }
 }
 
-p {
-  font-size: 20px;
+.tabs__wraper {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.tabs__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  white-space: nowrap;
+}
+.tabs__caption {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  padding: 22px 10px;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  background: #ff8261;
+}
+.tabs__content {
+  display: none;
+  padding: 30px;
+  color: rgb(14, 13, 13);
+}
+
+.tabs__caption_active {
+  background: #52cbf8;
+}
+
+.tabs__content_active {
+  display: block;
 }
