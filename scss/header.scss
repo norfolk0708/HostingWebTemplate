@@ -1,5 +1,9 @@
 header {
+<<<<<<< HEAD
     max-width: 1175px;
+=======
+    max-width: 1170px;
+>>>>>>> addfooter
     margin: 0 auto;
     padding: 0 15px;
     height: 100px;
@@ -12,7 +16,11 @@ header {
     &__img {}
     &__name {
         font-size: 20px;
+<<<<<<< HEAD
         line-height: 44px;
+=======
+        line-height: 31px;
+>>>>>>> addfooter
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: -0.005em;
@@ -47,4 +55,8 @@ header {
     &__login {
         padding: 0 5px 0 18px;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> addfooter
