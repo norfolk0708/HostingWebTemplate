@@ -4,6 +4,21 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap);
 
 body {
-    max-width: 1975px;
+    max-width: 1970px;
     font-family: 'Open Sans', sans-serif;
 } 
+.footer-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding-bottom: 20px;
+    @media (max-width: 991px) {
+        padding-bottom: 10px;
+    }
+}
+
+p {
+    font-size: 20px;
+}

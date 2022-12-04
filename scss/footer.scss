@@ -1,0 +1,108 @@
+footer {
+    background-color: #4c515b;
+    height: 385px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    @media (max-width: 991px) {
+        height: 250px;
+        align-items: start;
+        padding-top: 20px;
+    }
+}
+.footer {
+    &__wraper {
+        display: flex;
+        justify-content:space-between;
+        width: 1170px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 30px;
+        font-weight: 400;
+        color: #909aad;
+        padding: 0 20px;
+        @media (max-width: 991px) {
+            justify-content:space-around;
+            line-height: 22px;
+        }
+    }
+    &__copyright {
+        width: 216px;
+        padding-top: 62px;
+        text-align: left;
+        @media (max-width: 991px) {
+            position: absolute;
+            bottom:20px;
+            left:50%; 
+            margin-left:-108px;
+            text-align: center;
+        }
+    }
+    &__quick-links {
+        width: 216px;
+    }
+    &__contanct-us {
+        width: 216px;
+        span {
+            color: #e7f4f8;
+        }
+    }
+}
+.copyright {
+    &__logo {
+        display: flex;
+        @media (max-width: 991px) {
+            justify-content: center;
+        }
+        img{
+			width: 49px;
+            height: 31px;
+		}
+    }
+    &__name {
+        font-size: 20px;
+        line-height: 31px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: -0.005em;
+        color: #e7f4f8;
+        padding: 0 7px;
+    }
+}
+.quick-links {
+    &__title {
+        @extend .footer-title;
+    }
+    &__list {
+        list-style: none;
+        height: 170px;
+        display: flex;
+        flex-direction: column; 
+        flex-wrap: wrap;
+        @media (max-width: 991px) {
+            height: 120px;
+        }
+    }
+        li {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+}
+.contanct-us {
+    &__title {
+        @extend .footer-title;
+    }
+}
+.social-media {
+    &__title {
+        @extend .footer-title;
+    }
+    &__list {
+        img{
+            margin-right: 23px;
+        }
+    }
+}
+
+
+
