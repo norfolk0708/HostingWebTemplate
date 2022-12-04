@@ -83,11 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 header {
-<<<<<<< HEAD
-  max-width: 1175px;
-=======
   max-width: 1170px;
->>>>>>> addfooter
   margin: 0 auto;
   padding: 0 15px;
   height: 100px;
@@ -109,21 +105,12 @@ header {
 }
 .header-logo__name {
   font-size: 20px;
-<<<<<<< HEAD
-  line-height: 44px;
-=======
   line-height: 31px;
->>>>>>> addfooter
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -0.005em;
   color: #161920;
   margin: 0 10px 0 10px;
-<<<<<<< HEAD
-}
-
-.header-info {
-=======
 }
 
 .header-info {
@@ -228,45 +215,10 @@ footer {
 }
 
 .copyright__logo {
->>>>>>> addfooter
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  padding: 15px 0;
-  color: #9ba4b0;
-  width: 455px;
-  border: 1px solid #e1e9f2;
-  border-left: none;
-  border-right: none;
 }
-<<<<<<< HEAD
-.header-info__support {
-  padding: 0 18px;
-}
-.header-info__support span {
-  color: #484e57;
-}
-.header-info__register {
-  padding: 0 18px;
-  border: 1px solid #e1e9f2;
-  border-top: none;
-  border-bottom: none;
-}
-.header-info__login {
-  padding: 0 5px 0 18px;
-}
-
-body {
-  max-width: 1975px;
-  font-family: "Open Sans", sans-serif;
-=======
 @media (max-width: 991px) {
   .copyright__logo {
     -webkit-box-pack: center;
@@ -334,5 +286,8 @@ body {
   .footer-title, .quick-links__title, .contanct-us__title, .social-media__title {
     padding-bottom: 10px;
   }
->>>>>>> addfooter
+}
+
+p {
+  font-size: 20px;
 }
