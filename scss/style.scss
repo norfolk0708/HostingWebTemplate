@@ -18,7 +18,37 @@ body {
         padding-bottom: 10px;
     }
 }
-
-p {
-    font-size: 20px;
+  .tabs {
+    &__wraper {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+    &__head {
+        display: flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+    &__caption {
+        flex: 1;
+        text-align: center;
+        padding: 22px 10px;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #ffffff;
+        background: #ff8261;
+    }
+    &__body {}
+    &__content {
+        display: none;
+        padding: 30px;
+        color: rgb(14, 13, 13);
+    }
 }
+.tabs__caption_active {
+    background: #52cbf8;
+  }
+.tabs__content_active {
+    display: block;
+  }
