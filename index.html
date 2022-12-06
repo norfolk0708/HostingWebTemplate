@@ -7,7 +7,7 @@
 			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap');
 			</style>
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-		<meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width"/>
 	</head>
 	<body>
 		<div class="wraper">
@@ -40,7 +40,32 @@
 						<div class="tabs__caption" data-tab="contacs-us">Contacs us</div>
 					</div>
 					<div class="tabs__body">
-						<div class="tabs__content" data-tab="home">1</div>
+						<div class="tabs__content" data-tab="home">
+							<div class="slideshow__container">
+								<div class="slideshow__mySlides fade">
+									<img class="slideshow__img" src="/img/Slider/1.jpg">
+								  	<h1>Awesome hosting</h1>
+									<p>with unlimited features</p>
+								</div>
+								<div class="slideshow__mySlides fade">
+								  	<img class="slideshow__img" src="/img/Slider/2.jpg">
+								  	<h1>Awesome hosting</h1>
+									<p>with unlimited features</p>
+								</div>
+								<div class="slideshow__mySlides fade">
+									<img class="slideshow__img" src="/img/Slider/3.jpg">
+								  	<h1>Awesome hosting</h1>
+									<p>with unlimited features</p>
+								</div>
+								<a class="slideshow__prev" onclick="plusSlides(-1)">&#10094;</a>
+								<a class="slideshow__next" onclick="plusSlides(1)">&#10095;</a>
+								<div class="slideshow__dot-container">
+									<span class="slideshow__dot" onclick="currentSlide(1)"></span> 
+									<span class="slideshow__dot" onclick="currentSlide(2)"></span> 
+									<span class="slideshow__dot" onclick="currentSlide(3)"></span> 
+								</div>
+							</div>
+						</div>
 						<div class="tabs__content" data-tab="about-us">2</div>
 						<div class="tabs__content" data-tab="service">3</div>
 						<div class="tabs__content" data-tab="hosting-plans">4</div>
