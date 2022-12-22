@@ -1,58 +1,108 @@
 footer {
     background-color: #4c515b;
-    height: 385px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    @media (max-width: 991px) {
-        height: 250px;
-        align-items: start;
-        padding-top: 20px;
+    @media (min-width: 768px) and (max-width: 991px) {
+        min-height: 330px;
+        position: relative;
+        
     }
 }
 .footer {
     &__wraper {
         display: flex;
         justify-content:space-between;
-        width: 1170px;
+        flex-wrap: wrap;
+        max-width: 1170px;
         margin: 0 auto;
+        padding: 50px 20px 0px 20px;
+        @media (max-width: 991px) {
+            padding: 25px 50px 0px 50px;
+        }
+        @media (max-width: 480px) {
+            font-size: 13px;
+        }
+    }
+    &__copyright {
+        flex: 0 1 25%;
+        padding: 62px 0 20px 0;
         font-size: 14px;
         line-height: 30px;
         font-weight: 400;
         color: #909aad;
-        padding: 0 20px;
-        @media (max-width: 991px) {
-            justify-content:space-around;
-            line-height: 22px;
-        }
-    }
-    &__copyright {
-        width: 216px;
-        padding-top: 62px;
-        text-align: left;
-        @media (max-width: 991px) {
+        text-align: center;
+        @media (min-width: 768px) and (max-width: 991px) {
             position: absolute;
-            bottom:20px;
-            left:50%; 
-            margin-left:-108px;
-            text-align: center;
+            bottom: 0;
+            left: 50%;
+            width: 180px;
+            margin-left: -90px;
+            padding: 12px 0 12px 0;
+        }
+        @media (max-width: 767px) {
+            flex: 0 1 50%;
+            order: 4;
+            padding: 0 0 0 0;
+            text-align: left;
+        }
+        @media (max-width: 480px) {
+            font-size: 13px;
+            width: 100px;
         }
     }
     &__quick-links {
-        width: 216px;
+        flex: 0 1 25%;
+        padding-bottom: 20px;
+        @media (min-width: 768px) and (max-width: 991px) {
+            flex: 0 1 30%;
+            padding-left: 30px;
+        }
+        @media (max-width: 767px) {
+            flex: 0 1 50%;
+            order: 1;
+        }
+        @media (max-width: 480px) {
+        }
     }
     &__contanct-us {
-        width: 216px;
+        padding-bottom: 20px;
+        flex: 0 1 25%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        @media (min-width: 768px) and (max-width: 991px) {
+            flex: 0 1 36%;
+            padding-left: 30px;
+        }
+        @media (max-width: 767px) {
+            flex: 0 1 50%;
+            order: 2;
+        }
+        @media (max-width: 480px) {
+        }
         span {
             color: #e7f4f8;
+        }
+    }
+    &__social-media {
+        flex: 0 1 25%;
+        @media (min-width: 768px) and (max-width: 991px) {
+            padding-left: 30px;
+        }
+        padding-bottom: 20px;
+        @media (max-width: 767px) {
+            flex: 0 1 50%;
+            order: 3;
+        }
+        @media (max-width: 480px) {
         }
     }
 }
 .copyright {
     &__logo {
         display: flex;
-        @media (max-width: 991px) {
-            justify-content: center;
+        justify-content: center;
+        padding-left: 22px;
+        @media (max-width: 768px) {
+            justify-content:flex-start;
+            padding-left: 0px;
         }
         img{
 			width: 49px;
@@ -67,30 +117,47 @@ footer {
         letter-spacing: -0.005em;
         color: #e7f4f8;
         padding: 0 7px;
+        margin-right: 23px;
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
     }
 }
 .quick-links {
     &__title {
         @extend .footer-title;
     }
-    &__list {
+    &__content {
         list-style: none;
-        height: 170px;
+        height: 150px;
         display: flex;
         flex-direction: column; 
         flex-wrap: wrap;
-        @media (max-width: 991px) {
-            height: 120px;
+        @extend .footer-item;
+        @media (max-width: 480px) {
+            height:auto;
         }
     }
         li {
             page-break-inside: avoid;
             break-inside: avoid;
+            @media (max-width: 480px) {
+            }
         }
 }
 .contanct-us {
     &__title {
         @extend .footer-title;
+    }
+    &__content {
+        @extend .footer-item;
+    }
+    &__item {
+        @media (max-width: 480px) {
+             display: flex;
+             flex-direction: column;
+             padding-top: 8px;
+        }
     }
 }
 .social-media {
@@ -99,7 +166,10 @@ footer {
     }
     &__list {
         img{
-            margin-right: 23px;
+            margin: 0 8px 0 0px;
+            @media (max-width: 480px) {
+                margin: 0 6px 0 6px;
+            }
         }
     }
 }

@@ -6,6 +6,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (max-width: 767px) {
+        height: 72px;
+    }
 }
 .header-logo {
     display: flex;
@@ -33,9 +36,20 @@ header {
     border: 1px solid #e1e9f2;
     border-left: none;
     border-right: none;
+    @media (max-width: 767px) {
+        font-size: 12px;
+        padding: 10px 0;
+        display: block;
+        text-align: end;
+        border: none;
+    }
     &__support {
         padding: 0 18px;
         span {color: #484e57;
+        }
+        @media (max-width: 767px) {
+            padding: 0px 0px;
+            font-size: 10px;
         }
     }
     &__register {
@@ -43,8 +57,19 @@ header {
         border: 1px solid #e1e9f2;
         border-top: none;
         border-bottom: none;
+        @media (max-width: 767px) {
+            margin-top: 15px;
+            padding: 0 5px;
+            display: inline-block;
+            border-left: none;
+        }
     }
     &__login {
-        padding: 0 5px 0 18px;
+        padding: 0 18px;
+        @media (max-width: 767px) {
+            margin-top: 15px;
+            padding: 0 5px;
+            display: inline-block;
+        }
     }
 }
