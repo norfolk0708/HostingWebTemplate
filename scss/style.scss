@@ -7,6 +7,11 @@ body {
 		max-width: 1970px;
 		font-family: 'Open Sans', sans-serif;
 } 
+.wraper {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: space-between;
+}
 .footer-title {
 		font-size: 14px;
 		font-weight: 800;
@@ -18,29 +23,50 @@ body {
 				padding-bottom: 10px;
 		}
 }
+.footer-item {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #909aad;
+    text-transform: none;
+    @media (max-width: 480px) {
+        font-size: 13px;
+    }
+}
 .tabs {
 		&__wraper {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 0 auto;
+            
 		}
 		&__head {
 			display: flex;
-			flex-wrap: wrap;
+            justify-content:space-around;
 			white-space: nowrap;
             max-width: 1170px;
+            margin: 0 auto;
+            background: #ff8261;
+            @media (max-width: 767px) {
+                flex-wrap: wrap;
+            }
 		}
 		&__caption {
-			flex: 1;
-			text-align: center;
-			padding:25px;
+            flex: 0 1 10%;
+            padding: 0 10px;
 			font-size: 13px;
 			font-weight: 400;
 			text-transform: uppercase;
 			letter-spacing: 0.08em;
+            line-height: 57px;
 			color: #ffffff;
-			background: #ff8261;
+            text-align: center;
+            @media (max-width: 991px) {
+                font-size: 11px;
+            }
+            @media (max-width: 767px) {
+                flex: 0 1 20%;
+                line-height: 30px;
+                padding: 0 0px;
+                font-size: 10px;
+            }
 		}
 		&__body {
             width: 100%;
@@ -61,18 +87,26 @@ body {
 .slideshow {
     &__container {
         background-color: #222836;
-        max-height: 570px;
-        position: relative;
-        margin: 0 auto;
+        height: 575px;
+        div {
+            max-width: 1170px;
+            position: relative;
+            margin: 0 auto;
+        }
     }
     &__mySlides {
         display: none;
         text-align: center;
+        width: 70%;
+        height: 500px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 20px;
             h1 {
                 color: #ffffff;
                 padding: 8px 12px;
                 position: absolute;
-                bottom: 163px;
+                bottom: 75px;
                 width: 100%;
                 text-align: center;
                 font-size: 40px;
@@ -80,12 +114,18 @@ body {
                 font-weight: 800;
                 text-transform: uppercase;
                 letter-spacing: 0.025em;
+                @media (max-width: 767px) {
+                    font-size: 36px;
+                }
+                @media (max-width: 480px) {
+                    font-size: 28px;
+                }
             }
             p {
                 color: #ffffff;
                 padding: 8px 12px;
                 position: absolute;
-                bottom: 138px;
+                bottom: 50px;
                 width: 100%;
                 text-align: center;
                 line-height: 1.2;
@@ -93,50 +133,90 @@ body {
                 font-size: 20px;
                 font-weight: 300;
                 letter-spacing: 0.095em;
+                @media (max-width: 767px) {
+                    font-size: 18px;
+                }
+                @media (max-width: 480px) {
+                    font-size: 14px;
+                }
             }
     }
     &__img {
-        max-height: 500px;
-        width: 50%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
     &__prev {
         cursor: pointer;
         position: absolute;
         top: 50%;
+        left: 10px;
+        margin-top: -29px;
         width: auto;
-        padding: 16px;
-        margin-top: -22px;
+        padding: 17px 21px; 
         color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
+        font-size: 20px;
+        transition: 0.2s ease;
         user-select: none;
+        width: 59px;
+        height: 59px;
+        background-color: rgba(229,233,244,0.0);
+        border: 2px solid rgba(255,255,255,0.49);
+        border-radius: 50%;
+        @media (max-width: 767px) {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            padding: 15px 17px; 
+        }
+        @media (max-width: 480px) {
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+            padding: 11px 13px; 
+            left: 7px;
+        }
     }
-    &__prev:hover {
-        background-color: rgba(0,0,0,0.8);
+    &__prev:active {
+        background-color: #556b72;
     }
     &__next {
         cursor: pointer;
         position: absolute;
         top: 50%;
+        right: 10px;
         width: auto;
-        padding: 16px;
-        margin-top: -22px;
+        padding: 17px 21px ;
+        margin-top: -29px;
         color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
+        font-size: 20px;
+        transition: 0.2s ease;
         user-select: none;
-        right: 0;
-        border-radius: 3px 0 0 3px;
+        width: 59px;
+        height: 59px;
+        background-color: rgba(229,233,244,0.0);
+        border: 2px solid rgba(255,255,255,0.49);
+        border-radius: 50%;
+        @media (max-width: 767px) {
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            padding: 15px 17px; 
+        }
+        @media (max-width: 480px) {
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+            padding: 11px 15px;
+            right: 7px;
+        }
     }
     &__next:hover {
         background-color: rgba(0,0,0,0.8);
     }
     &__dot-container {
         text-align: center;
+        padding-top: 10px;
     }
     &__dot {
         cursor: pointer;
@@ -149,6 +229,9 @@ body {
         transition: background-color 0.6s ease;
     }
 }
+.active, .slideshow__dot:hover {
+    border: 2px solid #5278db;
+    }
 .fade {
 	-webkit-animation-name: fade;
 	-webkit-animation-duration: 1.5s;
@@ -163,12 +246,6 @@ body {
 	from {opacity: .4} 
 	to {opacity: 1}
 	}
-	/* Для маленьких экранов увеличьте размер текста */
-	@media only screen and (max-width: 300px) {
-	.slideshow__prev, .slideshow__next,.slideshow__text {font-size: 11px}
-	}
 
 
-.active, .slideshow__dot:hover {
-	border: 2px solid #5278db;
-	}
+   
