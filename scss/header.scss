@@ -1,19 +1,71 @@
-header {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media (max-width: 767px) {
-        height: 72px;
+
+.header {
+    background: rgb(255, 255, 255);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    &__wraper {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            @media (max-width: 767px) or (max-height: 767px){
+                height: 72px;
+            }
+        }
+    &__logo {
+        display: flex;
     }
-}
-.header-logo {
-    display: flex;
-    &__img {}
-    &__name {
+    &__logo-menu {
+        display: none;
+        @media (max-width: 480px) or (max-height: 480px) {
+            display: block;
+            position: relative;
+            width: 38px;
+            height: 25px;
+            cursor: pointer;
+            span{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                height: 12%;
+                width: 100%;
+                background: rgb(0, 0, 0);
+                z-index: 100;
+                transform: scale(1) translate(0px, -50%);
+            }
+        }
+    }
+    &__logo-menu::after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        height: 12%;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        transition: all 0.5s ease 0s;
+    }
+    &__logo-menu::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        height: 12%;
+        width: 100%;
+        background: rgb(0, 0, 0);
+        transition: all 0.5s ease 0s;
+    }
+    &__logo-img {
+        padding-left: 20px;
+    }
+    &__logo-name {
         font-size: 20px;
         line-height: 31px;
         font-weight: 800;
@@ -21,29 +73,32 @@ header {
         letter-spacing: -0.005em;
         color: #161920;
         margin: 0 10px 0 10px;
+        @media (max-width: 480px) {
+            font-size: 18px;
+        }
     }
-}
-.header-info {
-    display: flex;
-    justify-content: end;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    padding: 15px 0;
-    color: #9ba4b0;
-    width: 455px;
-    border: 1px solid #e1e9f2;
-    border-left: none;
-    border-right: none;
-    @media (max-width: 767px) {
-        font-size: 12px;
-        padding: 10px 0;
-        display: block;
-        text-align: end;
-        border: none;
+    &__info {
+        display: flex;
+        justify-content: end;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        padding: 15px 0;
+        color: #9ba4b0;
+        width: 455px;
+        border: 1px solid #e1e9f2;
+        border-left: none;
+        border-right: none;
+        @media (max-width: 767px) {
+            font-size: 12px;
+            padding: 10px 0;
+            display: block;
+            text-align: end;
+            border: none;
+        }
     }
-    &__support {
+    &__info-support {
         padding: 0 18px;
         span {color: #484e57;
         }
@@ -52,7 +107,7 @@ header {
             font-size: 10px;
         }
     }
-    &__register {
+    &__info-register {
         padding: 0 18px;
         border: 1px solid #e1e9f2;
         border-top: none;
@@ -64,7 +119,7 @@ header {
             border-left: none;
         }
     }
-    &__login {
+    &__info-login {
         padding: 0 18px;
         @media (max-width: 767px) {
             margin-top: 15px;
@@ -73,3 +128,17 @@ header {
         }
     }
 }
+
+.header__logo-menu-active span {
+    transform: scale(0) translate(0px, -50%);
+}
+.header__logo-menu-active::before {
+    top: 50%;
+    transform: rotate(-45deg) translate(0px, -50%);
+
+}
+.header__logo-menu-active::after {
+    bottom: 50%;
+    transform: rotate(45deg) translate(0px, 50%);
+}
+

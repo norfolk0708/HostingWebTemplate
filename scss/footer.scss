@@ -1,3 +1,25 @@
+.footer-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    padding-bottom: 20px;
+    @media (max-width: 991px) {
+            padding-bottom: 10px;
+    }
+}
+.footer-item {
+font-size: 14px;
+line-height: 30px;
+font-weight: 400;
+color: #909aad;
+text-transform: none;
+@media (max-width: 480px) {
+    font-size: 13px;
+}
+}
+
 footer {
     background-color: #4c515b;
     @media (min-width: 768px) and (max-width: 991px) {

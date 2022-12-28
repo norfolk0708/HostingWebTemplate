@@ -4,84 +4,90 @@
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap);
 
 body {
-		max-width: 1970px;
-		font-family: 'Open Sans', sans-serif;
+	max-width: 1970px;
+	font-family: 'Open Sans', sans-serif;
 } 
+body._lock {
+    overflow: hidden;
+}
 .wraper {
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-between;
-}
-.footer-title {
-		font-size: 14px;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: #ffffff;
-		padding-bottom: 20px;
-		@media (max-width: 991px) {
-				padding-bottom: 10px;
-		}
-}
-.footer-item {
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
-    color: #909aad;
-    text-transform: none;
-    @media (max-width: 480px) {
-        font-size: 13px;
-    }
 }
 .tabs {
-		&__wraper {
-            
-		}
-		&__head {
-			display: flex;
-            justify-content:space-around;
-			white-space: nowrap;
-            max-width: 1170px;
-            margin: 0 auto;
-            background: #ff8261;
-            @media (max-width: 767px) {
-                flex-wrap: wrap;
-            }
-		}
-		&__caption {
-            flex: 0 1 10%;
-            padding: 0 10px;
-			font-size: 13px;
-			font-weight: 400;
-			text-transform: uppercase;
-			letter-spacing: 0.08em;
-            line-height: 57px;
-			color: #ffffff;
-            text-align: center;
-            @media (max-width: 991px) {
-                font-size: 11px;
-            }
-            @media (max-width: 767px) {
-                flex: 0 1 20%;
-                line-height: 30px;
-                padding: 0 0px;
-                font-size: 10px;
-            }
-		}
-		&__body {
-            width: 100%;
+	&__wraper {
+    }
+    &__head {
+        display: flex;
+        justify-content: space-around;
+        white-space: nowrap;
+        max-width: 1170px;
+        margin: 0 auto;
+        background: #ff8261;
+        position: sticky;
+        top: 100px;
+        left: 0;
+        z-index: 5;
+        @media (max-width: 767px) or (max-height: 767px){
+            flex-wrap: wrap;
+            top: 72px;
         }
-		&__content {
-			display: none;
-			color: rgb(14, 13, 13);
-            background: #52cbf8;
-		}
+        @media (max-width: 480px) or (max-height: 480px){
+            flex-direction: column;
+            flex-wrap: nowrap;
+            position: fixed;
+            left: -100%;
+            width: 100%;
+            height: 779px;
+            opacity: 0.9;
+            transition: left 0.8s ease 0s;
+        }
+        @media (max-height: 480px) {
+            height: 321px;
+        }
+    }
+    &__caption {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 1 10%;
+        font-size: 13px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        height: 57px;
+        color: #ffffff;
+        @media (max-width: 991px) {
+            font-size: 11px;
+        }
+        @media (max-width: 767px) {
+            flex: 0 1 20%;
+            height: 30px;
+            font-size: 10px;
+        }
+        @media (max-width: 480px) or (max-height: 480px) {
+            font-size: 25px;
+            flex: 0 1 100%;
+            height: 25px;
+            justify-content:flex-start;
+            padding: 0 15px;
+        }
+    }
+    &__body {
+        width: 100%;
+    }
+    &__content {
+        display: none;
+        color: rgb(14, 13, 13);
+        background: #52cbf8;
+    }	
 }
+.tabs__head-active {
+    left: 0;
+    }
 .tabs__caption_active {
-		background: #52cbf8;
+	background: #52cbf8;
 	}
 .tabs__content_active {
-		display: block;
+	display: block;
 	}
 
 .slideshow {
@@ -102,44 +108,44 @@ body {
         overflow: hidden;
         position: relative;
         padding-top: 20px;
-            h1 {
-                color: #ffffff;
-                padding: 8px 12px;
-                position: absolute;
-                bottom: 75px;
-                width: 100%;
-                text-align: center;
-                font-size: 40px;
-                line-height: 1.2;
-                font-weight: 800;
-                text-transform: uppercase;
-                letter-spacing: 0.025em;
-                @media (max-width: 767px) {
-                    font-size: 36px;
-                }
-                @media (max-width: 480px) {
-                    font-size: 28px;
-                }
+        h1 {
+            color: #ffffff;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 75px;
+            width: 100%;
+            text-align: center;
+            font-size: 40px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+            @media (max-width: 767px) {
+                font-size: 36px;
             }
-            p {
-                color: #ffffff;
-                padding: 8px 12px;
-                position: absolute;
-                bottom: 50px;
-                width: 100%;
-                text-align: center;
-                line-height: 1.2;
-                text-transform: uppercase;
-                font-size: 20px;
-                font-weight: 300;
-                letter-spacing: 0.095em;
-                @media (max-width: 767px) {
-                    font-size: 18px;
-                }
-                @media (max-width: 480px) {
-                    font-size: 14px;
-                }
+            @media (max-width: 480px) {
+                font-size: 28px;
             }
+        }
+        p {
+            color: #ffffff;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 1.2;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.095em;
+            @media (max-width: 767px) {
+                font-size: 18px;
+            }
+            @media (max-width: 480px) {
+                font-size: 14px;
+            }
+        }    
     }
     &__img {
         height: 100%;
@@ -246,6 +252,14 @@ body {
 	from {opacity: .4} 
 	to {opacity: 1}
 	}
-
-
-   
+    p {
+        color: #ffffff;
+        padding: 20px 50px;
+        width: 100%;
+        text-align: center;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 0.095em;
+    }
