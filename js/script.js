@@ -91,6 +91,32 @@ var slideIndex = 1;
     })
   }
 
+  // Footer
+  const contanctUsArrow = document.querySelector('.contanct-us__title');
+  const quickLinksArrow = document.querySelector('.quick-links__title');
+  const contanctUsContent = document.querySelector('.contanct-us__content');
+  const quickLinksContent = document.querySelector('.quick-links__content');
+  if(contanctUsArrow) {
+    contanctUsArrow.addEventListener("click", function (e) {
+    contanctUsArrow.classList.toggle('contanct-us__title-active')
+    })
+  }
+  if(contanctUsArrow) {
+    contanctUsArrow.addEventListener("click", function (e) {
+    contanctUsContent.classList.toggle('contanct-us__content-active')
+    })
+  }
+  if(quickLinksArrow) {
+    quickLinksArrow.addEventListener("click", function (e) {
+    quickLinksArrow.classList.toggle('quick-links__title-active')
+    })
+  }
+  if(quickLinksArrow) {
+    quickLinksArrow.addEventListener("click", function (e) {
+    quickLinksContent.classList.toggle('quick-links__content-active')
+    })
+  }
+
 
 
 
