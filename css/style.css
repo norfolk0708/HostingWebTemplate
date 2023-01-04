@@ -481,19 +481,21 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
   }
 }
-.domain__logo {
+.domain__title {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 15%;
           flex: 0 1 15%;
   margin-top: -30px;
-  text-align: center;
 }
 @media (max-width: 991px) {
-  .domain__logo {
-    padding: 40px 40px 0 40px;
+  .domain__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 40px 0 20px 0;
   }
 }
-.domain__logo::before {
+.domain__title::before {
   content: "";
   background: url("/img/home/magnifier.png") no-repeat 0 4px;
   width: 100%;
@@ -604,7 +606,7 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 35%;
             flex: 0 1 35%;
-    margin: 10px 0 20px 0;
+    margin: 20px 0 20px 0;
   }
 }
 @media (max-width: 768px) {
@@ -617,55 +619,100 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .domain__name-placeholder::-webkit-input-placeholder, .domain__year-placeholder::-webkit-input-placeholder {
-  font-size: 13.5px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #a0a9b6;
   display: -webkit-box;
   display: flex;
 }
 
 .domain__name-placeholder::-moz-placeholder, .domain__year-placeholder::-moz-placeholder {
-  font-size: 13.5px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #a0a9b6;
   display: flex;
 }
 
 .domain__name-placeholder:-ms-input-placeholder, .domain__year-placeholder:-ms-input-placeholder {
-  font-size: 13.5px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #a0a9b6;
   display: -ms-flexbox;
   display: flex;
 }
 
 .domain__name-placeholder::-ms-input-placeholder, .domain__year-placeholder::-ms-input-placeholder {
-  font-size: 13.5px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #a0a9b6;
   display: -ms-flexbox;
   display: flex;
 }
 
 .domain__name-placeholder::placeholder, .fieldset, .domain__year-placeholder::placeholder {
-  font-size: 13.5px;
-  line-height: 1.2;
-  font-weight: 400;
-  letter-spacing: 0.01em;
-  color: #a0a9b6;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.benefits__container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.benefits__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 70px 0 0 0;
+}
+@media (max-width: 991px) {
+  .benefits__title {
+    padding: 30px 0 0 0;
+  }
+}
+.benefits__title::before {
+  content: "";
+  width: 21px;
+  height: 2px;
+  background-color: #fb6b45;
+  display: inline-block;
+}
+.benefits__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 30px 0 0 0;
+}
+.benefits__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  padding: 0 0 60px 0;
+}
+@media (max-width: 991px) {
+  .benefits__section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
+@media (max-width: 768px) {
+  .benefits__section {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    padding: 0 0 30px 0;
+  }
+}
+.benefits__info {
+  padding: 0 30px 0 30px;
+}
+.benefits__caption {
+  font-size: 16px;
+  line-height: 31px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  color: #556b72;
+}
 .footer-title, .social-media__title, .contanct-us__title, .quick-links__title {
   font-size: 14px;
   font-weight: 800;
@@ -984,20 +1031,71 @@ body._lock {
   overflow: hidden;
 }
 
-.font1, .domain__text {
+.font_title, .domain__text, .benefits__title {
   font-size: 18px;
   line-height: 31px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.025em;
   color: #859aa1;
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .font_title, .domain__text, .benefits__title {
+    font-size: 14px;
+  }
 }
 
-.font2, .domain__text span {
+.font_title-span, .domain__text span, .benefits__title span {
   font-size: 30px;
   font-weight: 800;
   letter-spacing: -0.025em;
   color: #556b72;
+}
+@media (max-width: 480px) {
+  .font_title-span, .domain__text span, .benefits__title span {
+    font-size: 26px;
+  }
+}
+
+.domain__name-placeholder::-webkit-input-placeholder, .domain__year-placeholder::-webkit-input-placeholder {
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #a0a9b6;
+}
+
+.domain__name-placeholder::-moz-placeholder, .domain__year-placeholder::-moz-placeholder {
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #a0a9b6;
+}
+
+.domain__name-placeholder:-ms-input-placeholder, .domain__year-placeholder:-ms-input-placeholder {
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #a0a9b6;
+}
+
+.domain__name-placeholder::-ms-input-placeholder, .domain__year-placeholder::-ms-input-placeholder {
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #a0a9b6;
+}
+
+.font_text, .domain__name-placeholder::placeholder, .fieldset, .domain__year-placeholder::placeholder, .benefits__text {
+  font-size: 13.5px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #a0a9b6;
 }
 
 .tabs__head {
@@ -1100,7 +1198,6 @@ body._lock {
 .tabs__content {
   display: none;
   color: rgb(14, 13, 13);
-  background: #52cbf8;
 }
 
 .tabs__head-active {
