@@ -161,6 +161,8 @@
 	to {opacity: 1}
 	}
 
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 .domain {
 	&__container {
         background-color: #e7f4f8;
@@ -180,17 +182,17 @@
         @media (max-width: 768px){
         }
     }
-	&__logo {
+	&__title {
         flex: 0 1 15%;
         margin-top: -30px;
-        text-align: center;
         @media(max-width: 991px){
-            padding: 40px 40px 0 40px;
+            flex: 0 1 100%;
+            padding: 40px 0 20px 0;
         }
         @media (max-width: 768px){
         }
     }
-    &__logo::before{
+    &__title::before {
         content: "";
         background: url('/img/home/magnifier.png') no-repeat 0 4px;
         width: 100%;
@@ -198,10 +200,10 @@
         display: inline-block;
     }
 	&__text {
-        @extend .font1;
+        @extend .font_title;
         text-align: left;
         span {
-            @extend .font2;
+            @extend .font_title-span;
         }
     }
 	&__name {
@@ -272,7 +274,7 @@
         cursor: pointer;
         @media (max-width: 991px){
             flex: 0 1 35%;
-            margin:  10px 0 20px 0;
+            margin:  20px 0 20px 0;
         }
         @media (max-width: 768px){
             height: 40px;
@@ -284,10 +286,68 @@
 }
 
 .domain__name-placeholder::placeholder,.fieldset,.domain__year-placeholder::placeholder {
-    font-size: 13.5px;
-    line-height: 1.2;
-    font-weight: 400;
-    letter-spacing: 0.01em;
-    color: #a0a9b6;
+    @extend .font_text;
     display: flex;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.benefits {
+    &__container {
+        max-width: 1170px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    &__title {
+        display: flex;
+        flex-direction: column;
+        padding: 70px 0 0 0;
+        @extend .font_title;
+        span {
+            @extend .font_title-span;
+        }
+        @media (max-width: 991px){
+            padding: 30px 0 0 0;
+        }
+    }
+    &__title::before {
+        content: "";
+        width: 21px;
+        height: 2px;
+        background-color: #fb6b45;
+        display: inline-block;
+
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0 0 0;
+    }
+    &__section {
+        display: flex;
+        flex: 0 1 33.333%;
+        padding: 0 0 60px 0;
+        @media (max-width: 991px){
+            flex: 0 1 50%;
+        }
+        @media (max-width: 768px){
+            flex: 0 1 100%;
+            padding: 0 0 30px 0;
+        }
+    }
+    &__logo {}
+    &__info {
+        padding: 0 30px 0 30px;
+    }
+    &__caption {
+        font-size: 16px;
+        line-height: 31px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.025em;
+        color: #556b72;
+    }
+    &__text {
+        @extend .font_text;
+    }
 }
