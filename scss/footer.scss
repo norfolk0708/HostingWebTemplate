@@ -13,8 +13,7 @@
 font-size: 14px;
 line-height: 30px;
 font-weight: 400;
-color: #909aad;
-text-transform: none;
+color: #909aad !important;
 @media (max-width: 480px) {
     font-size: 13px;
 }
@@ -143,6 +142,7 @@ footer {
 .quick-links {
     &__title {
         @extend .footer-title;
+        text-decoration: none;
         span {
             display: none;
         }
@@ -159,17 +159,29 @@ footer {
         display: flex;
         flex-direction: column; 
         flex-wrap: wrap;
-        @extend .footer-item;
+        text-decoration: none;
         @media (max-width: 480px) {
             height:auto;
             display: none;
         }
     }
-    li {
+    &__caption {
+        @extend .footer-item;
         page-break-inside: avoid;
         break-inside: avoid;
     }
 }
+
+
+.footer {
+    &__quick-links {}
+}
+.quick-links {
+    &__title {}
+    &__content {}
+    &__caption {}
+}
+
 .contanct-us {
     &__title {
         @extend .footer-title;

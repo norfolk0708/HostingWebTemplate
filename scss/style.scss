@@ -11,6 +11,20 @@ body {
 body._lock {
     overflow: hidden;
 }
+.font1 {
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #859aa1;
+}
+.font2 {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    color: #556b72;
+}
 .wraper {
 }
 .tabs {
@@ -19,7 +33,7 @@ body._lock {
     &__head {
         display: flex;
         justify-content: space-around;
-        white-space: nowrap;
+        flex-wrap: nowrap;
         max-width: 1170px;
         margin: 0 auto;
         background: #ff8261;
@@ -53,15 +67,15 @@ body._lock {
         font-size: 13px;
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: 0.08em;
+        text-align: center;
         height: 57px;
         color: #ffffff;
+        cursor: pointer;
         @media (max-width: 991px) {
             font-size: 11px;
         }
         @media (max-width: 767px) {
             flex: 0 1 20%;
-            height: 30px;
             font-size: 10px;
         }
         @media (max-width: 480px) or (max-height: 480px) {
@@ -69,8 +83,10 @@ body._lock {
             flex: 0 1 100%;
             height: 25px;
             justify-content:flex-start;
-            padding: 0 15px;
         }
+    }
+    &__caption:hover {
+        background: #52cbf8;
     }
     &__body {
         width: 100%;
