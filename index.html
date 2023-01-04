@@ -33,16 +33,16 @@
 			<main>
 				<div class="tabs__wraper">
 					<div class="tabs__head">
-						<a class="tabs__caption" data-tab="home">Home</a>
-						<a class="tabs__caption" data-tab="about-us">About us</a>
-						<a class="tabs__caption" data-tab="service">Servise</a>
-						<a class="tabs__caption" data-tab="hosting-plans">Hosting plans</a>
-						<a class="tabs__caption" data-tab="domain">Domain</a>
-						<a class="tabs__caption" data-tab="faq">Faq</a>
-						<a class="tabs__caption" data-tab="testimonials">Testimonials</a>
-						<a class="tabs__caption" data-tab="blog">Blog</a>
-						<a class="tabs__caption" data-tab="support">Support</a>
-						<a class="tabs__caption" data-tab="contacs-us">Contacs us</a>
+						<a class="tabs__caption" data-tab="home" id="home">Home</a>
+						<a class="tabs__caption" data-tab="about-us" id="about-us">About us</a>
+						<a class="tabs__caption" data-tab="service" id="service">Servise</a>
+						<a class="tabs__caption" data-tab="hosting-plans" id="hosting-plans">Hosting plans</a>
+						<a class="tabs__caption" data-tab="domain" id="domain">Domain</a>
+						<a class="tabs__caption" data-tab="faq" id="faq">Faq</a>
+						<a class="tabs__caption" data-tab="testimonials" id="testimonials">Testimonials</a>
+						<a class="tabs__caption" data-tab="blog" id="blog">Blog</a>
+						<a class="tabs__caption" data-tab="support" id="support">Support</a>
+						<a class="tabs__caption" data-tab="contacs-us" id="contacs-us">Contacs us</a>
 					</div>
 					<div class="tabs__body">
 						<div class="tabs__content" data-tab="home">
@@ -90,6 +90,25 @@
 									</div>
 								</div>
 							</div>
+							<form class="domain__container">
+								<fieldset class="domain__fieldset">
+									<div class="domain__logo">
+										<div class="domain__text">Search you<br><span>Domain</span></div>
+									</div>
+									<label class="domain__name fieldset" for="name">
+										<input class="domain__name-placeholder fieldset" placeholder="Enter your domain name" id="name" name="name" type="text" required />
+									</label>
+									<label class="domain__year fieldset" for="age"><input class="domain__year-placeholder fieldset" placeholder="Year (0-1 year)" id="age" type="number" name="age" min="0" max="120"/></label>
+									<label class="domain__mail" for="referrer">
+										<select class="fieldset" id="referrer" name="referrer">
+											<option value="">.com</option>
+											<option value="1">.net</option>
+											<option value="2">.org</option>
+										</select>
+									</label>
+									<input class="domain__search" type="submit" value="search"/>
+								</fieldset>
+							</form>
 						</div>
 						<div class="tabs__content" data-tab="about-us">
 							Stack Overflow на русском — это сайт вопросов и ответов для программистов. Присоединяйтесь! Регистрация займёт не больше минуты.
@@ -116,17 +135,18 @@
 					</div>
 					<div class="footer__quick-links">
 						<div class="quick-links__title">Quick links<span>^</span></div>
-							<ul class="quick-links__content">
-								<li>Home</li>
-								<li>About us</li>
-								<li>Service</li>
-								<li>Hosting plans</li>
-								<li>Domains</li>
-								<li>Faq</li>
-								<li>Blog</li>
-								<li>Support</li>
-								<li>Contact</li>
-							</ul>
+							<div class="quick-links__content">
+								<a href="#" class="quick-links__caption" id="footer_home">Home</a>
+								<a href="#" class="quick-links__caption" id="footer_about-us">About us</a>
+								<a href="#" class="quick-links__caption" id="footer_service">Servise</a>
+								<a href="#" class="quick-links__caption" id="footer_hosting-plans">Hosting plans</a>
+								<a href="#" class="quick-links__caption" id="footer_domain">Domain</a>
+								<a href="#" class="quick-links__caption" id="footer_faq">Faq</a>
+								<a href="#" class="quick-links__caption" id="footer_testimonials">Testimonials</a>
+								<a href="#" class="quick-links__caption" id="footer_blog">Blog</a>
+								<a href="#" class="quick-links__caption" id="footer_support">Support</a>
+								<a href="#" class="quick-links__caption" id="footer_contacs-us">Contacs us</a>
+							</div>
 					</div>
 					<div class="footer__contanct-us">
 						<div class="contanct-us__title">Contact us<span>^</span></div>

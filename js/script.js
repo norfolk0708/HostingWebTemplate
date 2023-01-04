@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => { // Структура ст
     const body = document.querySelector('.tabs__body') // ищем элемент с контентом и записываем в константу
     
     const getActiveTabName = () => { // объявляем функцию для получения названия активной вкладки
-      return tabsHead.querySelector('.tabs__caption_active').dataset.tab // возвращаем значение data-tab активной кнопки
+      return tabsHead.querySelector('.tabs__caption_active').dataset.tab
     }
     
     const setActiveContent = () => { // объявляем функцию для установки активного элемента контента
@@ -72,7 +72,7 @@ var slideIndex = 1;
   }
 
 
-// Меню бургер
+// Menu burger
   const burger = document.querySelector('.header__logo-menu');
   const tabsHead = document.querySelector('.tabs__head');
   if(burger) {
@@ -91,7 +91,9 @@ var slideIndex = 1;
     })
   }
 
-  // Footer
+  // footer
+
+  // mobile adaptive
   const contanctUsArrow = document.querySelector('.contanct-us__title');
   const quickLinksArrow = document.querySelector('.quick-links__title');
   const contanctUsContent = document.querySelector('.contanct-us__content');
@@ -117,7 +119,44 @@ var slideIndex = 1;
     })
   }
 
-
-
-
-
+  // switch tabs through quick links
+  document.getElementById('footer_home').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('home').click();
+  });
+  document.getElementById('footer_about-us').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('about-us').click();
+  });
+  document.getElementById('footer_service').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('service').click();
+  });
+  document.getElementById('footer_hosting-plans').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('hosting-plans').click();
+  });
+  document.getElementById('footer_domain').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('domain').click();
+  });
+  document.getElementById('footer_faq').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('faq').click();
+  });
+  document.getElementById('footer_testimonials').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('testimonials').click();
+  });
+  document.getElementById('footer_blog').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('blog').click();
+  });
+  document.getElementById('footer_support').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('support').click();
+  });
+  document.getElementById('footer_contacs-us').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.getElementById('contacs-us').click();
+  });

@@ -160,14 +160,134 @@
 	from {opacity: .4} 
 	to {opacity: 1}
 	}
-    p {
-        color: #ffffff;
-        padding: 20px 50px;
-        width: 100%;
-        text-align: center;
-        line-height: 1.2;
-        text-transform: uppercase;
-        font-size: 20px;
-        font-weight: 300;
-        letter-spacing: 0.095em;
+
+.domain {
+	&__container {
+        background-color: #e7f4f8;
     }
+	&__fieldset {
+        max-width: 1170px;
+        height: 200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media(max-width: 991px){
+            flex-wrap: wrap;
+            height: auto;
+        }
+        @media (max-width: 768px){
+        }
+    }
+	&__logo {
+        flex: 0 1 15%;
+        margin-top: -30px;
+        text-align: center;
+        @media(max-width: 991px){
+            padding: 40px 40px 0 40px;
+        }
+        @media (max-width: 768px){
+        }
+    }
+    &__logo::before{
+        content: "";
+        background: url('/img/home/magnifier.png') no-repeat 0 4px;
+        width: 100%;
+        height: 30px;
+        display: inline-block;
+    }
+	&__text {
+        @extend .font1;
+        text-align: left;
+        span {
+            @extend .font2;
+        }
+    }
+	&__name {
+        flex: 0 1 40%;
+        margin: 0 10px;
+        height: 55px;
+        background-color: #ffffff;
+        border: 1px solid #dfeef3;
+        padding-left: 25px;
+        input { 
+            width: 90%;
+        }
+        @media (max-width: 991px){
+            margin: 10px 0;
+            flex: 0 1 80%;
+        }
+        @media (max-width: 768px){
+            height: 40px;
+        }
+    }
+	&__year {
+        flex: 0 1 15%;
+        margin: 0 10px 0 10px;
+        height: 55px;
+        background-color: #ffffff;
+        border: 1px solid #dfeef3;
+        padding-left: 25px;
+        input {
+            width: 100%;
+        }
+        @media (max-width: 991px){
+            margin: 0 0.5% 0 0;
+            flex: 0 1 39.5%;
+        }
+        @media (max-width: 768px){
+            height: 40px;
+        }
+        
+    }
+	&__mail {
+        flex: 0 1 15%;
+        margin: 0 10px 0 10px;
+        height: 55px;
+        background-color: #ffffff;
+        border: 1px solid #dfeef3;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+        @media (max-width: 991px){
+            margin: 0 0 0 0.5%;
+            flex: 0 1 39.5%;
+        }
+        @media (max-width: 768px){
+            height: 40px;
+        }
+    }
+	&__search {
+        font-size: 13.5px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+        flex: 0 1 15%;
+        margin:  0 10px 0 10px;
+        height: 55px;
+        background-color: #ff8261;
+        cursor: pointer;
+        @media (max-width: 991px){
+            flex: 0 1 35%;
+            margin:  10px 0 20px 0;
+        }
+        @media (max-width: 768px){
+            height: 40px;
+        }
+    }
+    &__search:hover {
+        background: #52cbf8;
+    }
+}
+
+.domain__name-placeholder::placeholder,.fieldset,.domain__year-placeholder::placeholder {
+    font-size: 13.5px;
+    line-height: 1.2;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #a0a9b6;
+    display: flex;
+}
